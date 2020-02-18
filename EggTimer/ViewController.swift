@@ -10,6 +10,31 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
-
+   let softTime = 5
+    let mediumTime = 8
+    let hardTime = 12
+    
+    
+    @IBAction func hardnessSelected(_ sender: UIButton) {
+        let hardness = sender.currentTitle
+        switch hardness {
+        case "soft":
+            print(softTime)
+        case "medium":
+            print(mediumTime)
+        case "hard":
+            print(hardTime)
+        default:
+print("none")        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
+
+
