@@ -13,6 +13,8 @@ class ViewController: UIViewController {
    let softTime = 5
     let mediumTime = 8
     let hardTime = 12
+    var gameTimer: Timer?
+
     
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
@@ -21,16 +23,25 @@ class ViewController: UIViewController {
         switch hardness {
         case "Soft":
             print(softTime)
+            gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
+
         case "Medium":
             print(mediumTime)
+            gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
+
         case "Hard":
             print(hardTime)
+            gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
+
         default:
 print("none")        }
+        
     }
     
     
-    
+    func timer (time: Int) {
+      print(time)
+    }
     
     
     
