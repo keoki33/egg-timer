@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     let mediumTime = 8
     let hardTime = 12
     var gameTimer: Timer?
+    var counter: Int = 0
 
     
     
@@ -22,31 +23,34 @@ class ViewController: UIViewController {
         print(hardness)
         switch hardness {
         case "Soft":
-            print(softTime)
-            gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
-
+            gameTimer?.invalidate()
+          startTimer(time: softTime)
         case "Medium":
-            print(mediumTime)
-            gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
-
+          gameTimer?.invalidate()
+            startTimer(time: mediumTime)
         case "Hard":
-            print(hardTime)
-            gameTimer = Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
-
+          gameTimer?.invalidate()
+startTimer(time:hardTime)
         default:
 print("none")        }
         
     }
     
+
+    func startTimer(time: Int)  {
+        counter = time
+       gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
     
-    func timer (time: Int) {
-      print(time)
     }
-    
-    
-    
-    
-    
+     @objc func timer() {
+        if counter > -1 {
+            print(counter)
+            counter -= 1}
+        else {
+            gameTimer?.invalidate()
+        }
+    }
+  
 }
 
 
