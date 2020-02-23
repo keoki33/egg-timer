@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var counter: Int = 0
 
     
+    @IBOutlet weak var counterDisplay: UILabel!
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
         let hardness = sender.currentTitle!
@@ -45,6 +46,7 @@ print("none")        }
      @objc func timer() {
         if counter > -1 {
             print(counter)
+            counterDisplay.text = String(counter)
             counter -= 1}
         else {
             gameTimer?.invalidate()
