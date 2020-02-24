@@ -15,9 +15,14 @@ class ViewController: UIViewController {
     let hardTime = 12
     var gameTimer: Timer?
     var counter: Int = 0
+  
 
+    @IBOutlet weak var softPic: UIButton!
+    @IBOutlet weak var mediumPic: UIButton!
+    @IBOutlet weak var hardPic: UIButton!
     
     @IBOutlet weak var counterDisplay: UILabel!
+    
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
         let hardness = sender.currentTitle!
@@ -25,20 +30,22 @@ class ViewController: UIViewController {
         switch hardness {
         case "Soft":
             gameTimer?.invalidate()
-          startTimer(time: softTime)
+            startTimer(time: softTime, sender: sender)
+            
         case "Medium":
           gameTimer?.invalidate()
-            startTimer(time: mediumTime)
+            startTimer(time: mediumTime, sender: sender)
         case "Hard":
           gameTimer?.invalidate()
-startTimer(time:hardTime)
+startTimer(time:hardTime, sender: sender)
         default:
 print("none")        }
         
     }
     
 
-    func startTimer(time: Int)  {
+    func startTimer(time: Int, sender: UIButton)  {
+    
         counter = time
        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
     
@@ -52,6 +59,7 @@ print("none")        }
             gameTimer?.invalidate()
         }
     }
+    
   
 }
 

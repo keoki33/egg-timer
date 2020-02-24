@@ -121,14 +121,17 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgY-tu-Osy">
-                                                <rect key="frame" x="145" y="92" width="84" height="42"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgY-tu-Osy">
+                                                <rect key="frame" x="168.5" y="87" width="37" height="72"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="kgY-tu-Osy" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="Ief-4z-se3"/>
+                                            <constraint firstItem="kgY-tu-Osy" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="JUL-ED-i29"/>
+                                        </constraints>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -144,6 +147,9 @@
                     </view>
                     <connections>
                         <outlet property="counterDisplay" destination="kgY-tu-Osy" id="4ts-W0-QLA"/>
+                        <outlet property="hardPic" destination="NEu-V5-iHi" id="5Mf-qg-5wA"/>
+                        <outlet property="mediumPic" destination="Q3H-nl-7AG" id="4Z4-gc-Azy"/>
+                        <outlet property="softPic" destination="kNr-Dp-1Dg" id="0W0-ZT-4ZG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
