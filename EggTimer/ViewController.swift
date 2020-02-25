@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var softPic: UIButton!
     @IBOutlet weak var mediumPic: UIButton!
     @IBOutlet weak var hardPic: UIButton!
+    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var counterDisplay: UILabel!
     
@@ -29,14 +30,10 @@ class ViewController: UIViewController {
         print(hardness)
         switch hardness {
         case "Soft":
-            gameTimer?.invalidate()
             startTimer(time: softTime, sender: sender)
-            
         case "Medium":
-          gameTimer?.invalidate()
             startTimer(time: mediumTime, sender: sender)
         case "Hard":
-          gameTimer?.invalidate()
 startTimer(time:hardTime, sender: sender)
         default:
 print("none")        }
@@ -45,22 +42,23 @@ print("none")        }
     
 
     func startTimer(time: Int, sender: UIButton)  {
-    
+        gameTimer?.invalidate()
+    titleLabel.text = "How do you like your eggs?"
         counter = time
        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
     
     }
      @objc func timer() {
-        if counter > -1 {
+        if counter > 0 {
             print(counter)
             counterDisplay.text = String(counter)
             counter -= 1}
         else {
+            counterDisplay.text = String(0)
+            titleLabel.text = "Done"
             gameTimer?.invalidate()
         }
     }
-    
-  
 }
 
 

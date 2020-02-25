@@ -150,6 +150,7 @@
                         <outlet property="hardPic" destination="NEu-V5-iHi" id="5Mf-qg-5wA"/>
                         <outlet property="mediumPic" destination="Q3H-nl-7AG" id="4Z4-gc-Azy"/>
                         <outlet property="softPic" destination="kNr-Dp-1Dg" id="0W0-ZT-4ZG"/>
+                        <outlet property="titleLabel" destination="XLm-5r-pSP" id="vJC-bB-dik"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
