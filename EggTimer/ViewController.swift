@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var counterDisplay: UILabel!
+    @IBOutlet weak var cookingProgress: UIProgressView!
     
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
@@ -52,10 +53,13 @@ print("none")        }
         if counter > 0 {
             print(counter)
             counterDisplay.text = String(counter)
+            cookingProgress.progress = Float(counter / 10)
+
             counter -= 1}
         else {
             counterDisplay.text = String(0)
             titleLabel.text = "Done"
+            cookingProgress.progress = 1
             gameTimer?.invalidate()
         }
     }
