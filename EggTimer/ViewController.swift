@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     let hardTime = 12
     var gameTimer: Timer?
     var counter: Int = 0
+    var setTime: Int = 0
   
 
     @IBOutlet weak var softPic: UIButton!
@@ -46,15 +47,18 @@ print("none")        }
         gameTimer?.invalidate()
     titleLabel.text = "How do you like your eggs?"
         counter = time
+        setTime = time
        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
     
     }
      @objc func timer() {
+        
         if counter > 0 {
             print(counter)
             counterDisplay.text = String(counter)
-            cookingProgress.progress = Float(counter / 10)
-
+            cookingProgress.progress = (Float(counter) * 10) / Float(setTime)
+           
+            print(Float(setTime) / (Float(counter) * 10) )
             counter -= 1}
         else {
             counterDisplay.text = String(0)
