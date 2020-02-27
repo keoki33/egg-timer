@@ -56,7 +56,7 @@ print("none")        }
         if counter > 0 {
             print(counter)
             counterDisplay.text = String(counter)
-            cookingProgress.progress = (Float(counter) * 10) / Float(setTime)
+            cookingProgress.progress = Float(setTime) / (Float(counter) * 10)
            
             print(Float(setTime) / (Float(counter) * 10) )
             counter -= 1}

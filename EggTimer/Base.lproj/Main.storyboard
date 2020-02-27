@@ -121,33 +121,35 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJN-th-c5K" userLabel="Timer View">
                                         <rect key="frame" x="0.0" y="571.5" width="374" height="246.5"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Sog-qW-frp">
-                                                <rect key="frame" x="20" y="8.5" width="354" height="229"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Krn-2I-Byb">
+                                                <rect key="frame" x="20" y="0.0" width="334" height="246.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgY-tu-Osy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="354" height="100"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="236.5"/>
                                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="52"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progressImage="I" trackImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="beE-Ic-enw">
-                                                        <rect key="frame" x="0.0" y="129" width="354" height="100"/>
+                                                        <rect key="frame" x="0.0" y="236.5" width="334" height="11"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="100" id="y0j-nR-ubc"/>
+                                                            <constraint firstAttribute="height" constant="10" id="q9e-c7-j3p"/>
                                                         </constraints>
+                                                        <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="trackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </progressView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="beE-Ic-enw" firstAttribute="leading" secondItem="Sog-qW-frp" secondAttribute="leading" constant="20" symbolic="YES" id="Atm-vb-Frp"/>
-                                                    <constraint firstAttribute="trailing" secondItem="beE-Ic-enw" secondAttribute="trailing" constant="20" symbolic="YES" id="Zhj-jz-zM6"/>
+                                                    <constraint firstItem="beE-Ic-enw" firstAttribute="leading" secondItem="Krn-2I-Byb" secondAttribute="leading" constant="20" symbolic="YES" id="4PI-zM-SWS"/>
+                                                    <constraint firstAttribute="trailing" secondItem="beE-Ic-enw" secondAttribute="trailing" constant="20" symbolic="YES" id="otH-4q-WLI"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Sog-qW-frp" firstAttribute="centerY" secondItem="nJN-th-c5K" secondAttribute="centerY" id="MwX-b8-uLU"/>
-                                            <constraint firstItem="Sog-qW-frp" firstAttribute="centerX" secondItem="nJN-th-c5K" secondAttribute="centerX" id="QP5-Zf-led"/>
-                                            <constraint firstItem="Sog-qW-frp" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" constant="20" symbolic="YES" id="UYJ-qs-49T"/>
-                                            <constraint firstAttribute="trailing" secondItem="Sog-qW-frp" secondAttribute="trailing" id="df0-33-NPk"/>
+                                            <constraint firstItem="Krn-2I-Byb" firstAttribute="leading" secondItem="nJN-th-c5K" secondAttribute="leading" constant="20" symbolic="YES" id="MHz-nM-4kN"/>
+                                            <constraint firstAttribute="trailing" secondItem="Krn-2I-Byb" secondAttribute="trailing" constant="20" symbolic="YES" id="R2S-oC-KwZ"/>
+                                            <constraint firstItem="Krn-2I-Byb" firstAttribute="top" secondItem="nJN-th-c5K" secondAttribute="top" id="kso-6j-C2X"/>
+                                            <constraint firstAttribute="bottom" secondItem="Krn-2I-Byb" secondAttribute="bottom" id="w2u-dG-YQy"/>
                                         </constraints>
                                     </view>
                                 </subviews>
