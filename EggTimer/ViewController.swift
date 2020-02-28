@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -16,7 +17,7 @@ class ViewController: UIViewController {
     var gameTimer: Timer?
     var counter: Int = 0
     var setTime: Int = 0
-  
+   var player: AVAudioPlayer!
 
     @IBOutlet weak var softPic: UIButton!
     @IBOutlet weak var mediumPic: UIButton!
@@ -47,7 +48,7 @@ print("none")        }
         gameTimer?.invalidate()
     titleLabel.text = "How do you like your eggs?"
         counter = time
-        setTime = time
+        setTime = time 
        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
     
     }
@@ -65,7 +66,15 @@ print("none")        }
             titleLabel.text = "Done"
             cookingProgress.progress = 1
             gameTimer?.invalidate()
+            playSound()
         }
+    }
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+                
     }
 }
 

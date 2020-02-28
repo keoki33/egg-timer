@@ -125,23 +125,23 @@
                                                 <rect key="frame" x="20" y="0.0" width="334" height="246.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgY-tu-Osy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="236.5"/>
-                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="52"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="334" height="241.5"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="51"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progressImage="I" trackImage="I" translatesAutoresizingMaskIntoConstraints="NO" id="beE-Ic-enw">
-                                                        <rect key="frame" x="0.0" y="236.5" width="334" height="11"/>
+                                                        <rect key="frame" x="0.0" y="241.5" width="334" height="6"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="10" id="q9e-c7-j3p"/>
+                                                            <constraint firstAttribute="height" constant="5" id="q9e-c7-j3p"/>
                                                         </constraints>
                                                         <color key="progressTintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="trackTintColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </progressView>
                                                 </subviews>
                                                 <constraints>
-                                                    <constraint firstItem="beE-Ic-enw" firstAttribute="leading" secondItem="Krn-2I-Byb" secondAttribute="leading" constant="20" symbolic="YES" id="4PI-zM-SWS"/>
-                                                    <constraint firstAttribute="trailing" secondItem="beE-Ic-enw" secondAttribute="trailing" constant="20" symbolic="YES" id="otH-4q-WLI"/>
+                                                    <constraint firstItem="beE-Ic-enw" firstAttribute="leading" secondItem="kgY-tu-Osy" secondAttribute="leading" id="4PI-zM-SWS"/>
+                                                    <constraint firstItem="kgY-tu-Osy" firstAttribute="trailing" secondItem="beE-Ic-enw" secondAttribute="trailing" id="otH-4q-WLI"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
