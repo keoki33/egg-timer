@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     var gameTimer: Timer?
     var counter: Int = 0
     var setTime: Int = 0
+    var egg: String = ""
    var player: AVAudioPlayer!
 
     @IBOutlet weak var softPic: UIButton!
@@ -33,10 +34,13 @@ class ViewController: UIViewController {
         print(hardness)
         switch hardness {
         case "Soft":
+            egg = "Soft"
             startTimer(time: softTime, sender: sender)
         case "Medium":
+            egg = "Medium"
             startTimer(time: mediumTime, sender: sender)
         case "Hard":
+            egg = "Hard"
 startTimer(time:hardTime, sender: sender)
         default:
 print("none")        }
@@ -48,7 +52,7 @@ print("none")        }
         gameTimer?.invalidate()
     titleLabel.text = "How do you like your eggs?"
         counter = time
-        setTime = time 
+        setTime = time
        gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timer), userInfo: nil, repeats: true)
     
     }
@@ -57,13 +61,11 @@ print("none")        }
         if counter > 0 {
             print(counter)
             counterDisplay.text = String(counter)
-            cookingProgress.progress = Float(setTime) / (Float(counter) * 10)
-           
-            print(Float(setTime) / (Float(counter) * 10) )
+            cookingProgress.progress = abs((Float(counter) / Float(setTime)) - 1.0)
             counter -= 1}
         else {
             counterDisplay.text = String(0)
-            titleLabel.text = "Done"
+            titleLabel.text = "\(egg) egg is done"
             cookingProgress.progress = 1
             gameTimer?.invalidate()
             playSound()
